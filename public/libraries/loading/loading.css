@@ -1,0 +1,39 @@
+#loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+#loader::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #fb0094, #0000ff, #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00, #fb0094);
+    animation: loading-animte 20s linear infinite;
+    background-size: 500%;
+}
+
+#loader::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #fb0094, #0000ff, #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00, #fb0094);
+    animation: loading-animte 20s linear infinite;
+    background-size: 500%;
+    filter: blur(20px);
+}
+
+@keyframes loading-animte {
+    0% {
+        background-position: 0 0;
+    }
+    0% {
+        background-position: 500% 0;
+    }
+}

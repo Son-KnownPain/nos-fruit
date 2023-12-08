@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+// Variables ---------------------------------
+
+@import '../_variables';
+
+//--------------------------------------------
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 4px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2eac9d;
+}
+
+$header-height: 80px;
+$sidebar-width: 260px;
+
+header.header {
+    height: $header-height;
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a.logo-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 700;
+        padding-left: 8px;
+    }
+
+    .menu {
+        margin-right: 8px;
+
+        a.menu-item {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid transparent;
+            padding: 8px;
+            border-radius: 4px;
+
+            &:hover {
+                border: 1px solid #fff;
+            }
+        }
+    }
+}
+
+.sidebar {
+    width: $sidebar-width;
+    height: calc(100vh - $header-height);
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 7px rgb(0 0 0/ 10%);
+
+    a.sidebar-item-link {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $text-color;
+        text-decoration: none;
+        padding: 16px 8px 0 8px;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.content {
+    width: calc(100vw - $sidebar-width);
+    height: calc(100vh - $header-height);
+    overflow-y: overlay;
+    margin-left: $sidebar-width;
+    padding: 8px;
+}

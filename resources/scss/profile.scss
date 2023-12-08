@@ -1,0 +1,312 @@
+@import 'app';
+
+.content {
+    .profile {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 7x rgb(0 0 0/ 10%);
+    }
+    
+    h3.title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #888;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    h2.orders-empty-title {
+        background-color: $primary-color;
+        color: #fff;
+        padding: 12px;
+        font-size: 1.8rem;
+        border-radius: 8px;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .right-content, .sidemenu {
+        padding: 20px;
+    }
+
+    .sidemenu {
+
+        .item-link {
+            display: block;
+            color: $text-color;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 600;
+            transition: all ease-out .15s;
+
+            &:not(.active):hover {
+                color: $primary-color;
+                padding-left: 8px;
+            }
+
+            &.active {
+                color: $primary-color;
+            }
+        }
+
+        .item-link + .item-link {
+            margin-top: 16px;
+        }
+    }
+
+    .right-content {
+        .profile-info {
+            h1.key {
+                color: #888;
+                font-size: 1.6rem;
+                font-weight: 600;
+
+                span.value {
+                    color: $text-color;
+                    margin-left: 8px;
+
+                    i {
+                        color: #0098cfc5;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 32px;
+                }
+            }
+
+            h1.key + h1.key {
+                margin-top: 18px;
+            }
+        }
+
+        form.address-form {
+            padding: 16px 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            label {
+                display: block;
+                color: #888;
+                margin-top: 16px;
+            }
+
+            select {
+                width: 50%;
+                min-width: 200px;
+                max-width: 500px;
+                border-radius: 8px;
+                border: 1px solid #999;
+                padding: 8px;
+                outline: none;
+            }
+
+            button.submit-btn {
+                display: block;
+                font-weight: 600;
+                background-color: $primary-color;
+                color: #fff;
+                margin-top: 16px;
+                padding: 4px 8px;
+                border: 1px solid transparent;
+                border-radius: 6px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-100%);
+                transition: all ease-out .15s;
+
+                &:hover {
+                    border: 1px solid $primary-color;
+                    background-color: #fff;
+                    color: $text-color;
+                }
+            }
+        }
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            min-width: 400px;
+            box-shadow: 0 0 7px rgba(0, 0, 0, 10%);
+
+            // My SCSS --------------------------
+
+            .order-tr:hover {
+                cursor: pointer;
+                color: $primary-color;
+            }
+
+            // ----------------------------------
+
+            thead tr {
+                background-color: $primary-color;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            th, td {
+                padding: 12px 16px;
+            }
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid $primary-color;
+        }
+
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+    }
+
+    #order-detail-modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 11;
+        display: none;
+
+        &.active {
+            display: flex;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .order-detail {
+            position: relative;
+            width: 900px;
+            height: 600px;
+            padding: 16px;
+            min-height: 400px;
+            background-color: $primary-color;
+            border-radius: 8px;
+            overflow-y: overlay;
+            animation: slideDown ease-in .2s;
+
+            span.close-btn {
+                position: absolute;
+                top: 16px;
+                right: 20px;
+                font-size: 1.8rem;
+                width: 28px;
+                height: 28px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: #ea3e17;
+                background-color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #fff;
+                    background-color: #ea3e17;
+                }
+            }
+
+            h3.order-detail-title {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #fff;
+                text-align: center;
+                margin: 16px 0;
+            }
+
+            .styled-table {
+                border-collapse: collapse;
+                margin: 25px 0;
+                font-size: 1.6rem;
+                font-weight: 600;
+                min-width: 400px;
+                width: 100%;
+    
+                thead tr {
+                    background-color: #fff;
+                    color: #000;
+                    text-align: left;
+                }
+    
+                th, td {
+                    padding: 12px 16px;
+                }
+
+                td {
+                    color: #fff;
+                }
+            }
+    
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+            
+            .styled-table tbody tr:nth-of-type(even) {
+                background-color: #159b8c;
+            }
+            
+            .styled-table tbody tr:last-of-type {
+                border-bottom: 2px solid #fff;
+            }
+    
+            .styled-table tbody tr.active-row {
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .product-item {
+                color: #fff;
+                margin-top: 20px;
+
+                img {
+                    width: 100%;
+                    border-radius: 8px;
+                    background-color: #fff;
+                }
+
+                .name {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+
+                .price {
+                    font-size: 1.6rem;
+                    margin-bottom: 16px;
+                }
+
+                .quantity-text {
+                    font-size: 1.6rem;
+                    display: block;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}

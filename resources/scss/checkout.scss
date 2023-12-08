@@ -1,0 +1,142 @@
+@import 'app';
+
+.content {
+    h2.page-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .order-box {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 7px rgb(0 0 0 / 10%);
+        padding: 16px;
+
+        .products-review {
+            .item-review {
+                .thumbnail {
+                    width: 100%;
+                    border: 1px solid #c5c5c5;
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
+    
+                h4.name {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    margin: 0;
+                }
+    
+                p.unit-price, p.quantity, p.final-price {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                    margin-top: 16px;
+                    color: #666;
+    
+                    span {
+                        margin-left: 12px;
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            .item-review + .item-review {
+                margin-top: 24px;
+            }
+        }
+
+        .payment-info {
+            background-color: $primary-color;
+            color: #fff;
+            padding: 16px 24px;
+            border-radius: 8px;
+
+            p, h3 {
+                margin-bottom: 0;
+            }
+            
+            .title {
+                margin-left: -8px;
+                font-size: 1.8rem;
+                font-weight: 600;
+                padding-bottom: 16px;
+            }
+
+            .note {
+                font-size: 1.4rem;
+                font-weight: 300;
+
+                a {
+                    color: #fef65e;
+                }
+
+                .highlight {
+                    font-weight: 700;
+                    color: yellow;
+                }
+            }
+
+            p.key {
+                font-size: 1.6rem;
+                font-weight: 300;
+                margin-top: 18px;
+                margin-left: 12px;
+                list-style: disc outside none;
+                display: list-item;
+
+                span.value {
+                    font-weight: 500;
+                    margin-left: 8px;
+                }
+            }
+
+            form {
+                border-top: 1px solid #ffebcd;
+                margin-top: 16px;
+            }
+
+            label.label {
+                display: block;
+                font-size: 1.6rem;
+                font-weight: 300;
+                margin-top: 16px;
+            }
+
+            .input {
+                outline: none;
+                font-size: 1.6rem;
+                font-weight: 500;
+                border: 1px solid #999;
+                border-radius: 4px;
+                margin-top: 12px;
+                padding: 8px;
+                width: 100%;
+                line-height: 100%;
+            }
+
+            button {
+                font-size: 1.6rem;
+                font-weight: 500;
+                padding: 6px 10px;
+                display: block;
+                margin-top: 18px;
+                border: 3px solid #fff;
+                border-radius: 4px;
+                position: relative;
+                left: 100%;
+                transform: translateX(-100%);
+                background-color: $primary-color;
+                color: #fff;
+                transition: border-color ease-out .15s;
+
+                &:hover {
+                    border-color: #66ff00;
+                }
+            }
+        }
+    }
+}

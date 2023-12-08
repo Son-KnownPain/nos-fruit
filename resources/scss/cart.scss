@@ -1,0 +1,102 @@
+@import 'app';
+
+.content {
+    .page-heading {
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    table.table {
+        font-size: 1.6rem;
+        background-color: #fff;
+        box-shadow: 0 0 7px rgb(0 0 0 / 10%);
+        margin-top: 24px;
+        text-align: center;
+
+        td {
+            font-weight: 600;
+            color: #666;
+
+            &.price {
+                color: $primary-color;
+                font-weight: 700;
+            }
+
+            .icon {
+                border: 1px solid #e1e1e1;
+                border-radius: 4px;
+                padding: 4px;
+                margin: 0 4px;
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .product-img {
+            width: 200px;
+        }
+        
+        .remove-btn {
+            cursor: pointer;
+            color: #888;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .payment {
+        background-color: #fff;
+        padding: 24px 18px;
+        margin: 0;
+        box-shadow: 0 0 7px rgb(0 0 0 / 10%);
+
+        .price-to-pay {
+            color: #888;
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-align: right;
+            margin-bottom: 16px;
+
+            span.price-value {
+                color: $primary-color;
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-left: 16px;
+            }
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+
+            .action-btn {
+                padding: 8px 12px;
+                border: 1px solid $primary-color;
+                border-radius: 4px;
+                color: $text-color;
+                font-size: 1.6rem;
+                font-weight: 500;
+                text-decoration: none;
+                // Hover setup
+                box-shadow: inset 0 0 0 0 $primary-color;
+                transition: color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+                &:hover {
+                    box-shadow: inset 180px 0 0 0 $primary-color;
+                    color: white;
+                }
+            }
+
+            .action-btn + .action-btn {
+                margin-left: 16px;
+            }
+        }
+    }
+}

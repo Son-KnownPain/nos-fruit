@@ -1,0 +1,122 @@
+@import 'app';
+
+.content {
+    .login-box {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 7px rgb(0 0 0 / 10%);
+        padding: 24px;
+
+        .page-heading {
+            font-size: 2rem;
+            font-weight: 600;
+            color: $text-color;
+            text-align: center;
+            margin: 0;
+        }
+
+        .text {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #666;
+            text-align: center;
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+
+        .text-link {
+            text-decoration: none;
+        }
+
+        .input-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 24px;
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            form {
+                width: 30%;
+            }
+
+            .pass-box {
+                position: relative;
+                .eye {
+                    position: absolute;
+                    top: 50%;
+                    right: 16px;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    color: #555;
+                    z-index: 1;
+                }
+            }
+
+            input.form-input {
+                display: block;
+                width: 100%;
+                font-size: 1.6rem;
+                outline: none;
+                padding: 8px 12px;
+                margin-top: 8px;
+                border: 1px solid #c1c1c1;
+                border-radius: 8px;
+            }
+
+            .form-group.invalid {
+                .err-msg {
+                    display: block;
+                    animation: rumbling ease-out .15s;
+                }
+            }
+
+            .err-msg {
+                display: none;
+                color: red;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+
+            @keyframes rumbling {
+                0% {
+                    transform: translateX(-10px);
+                }
+                25% {
+                    transform: translateX(10px);
+                }
+                50% {
+                    transform: translateX(-10px);
+                }
+                75% {
+                    transform: translateX(10px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+
+            .form-group + .form-group {
+                margin-top: 24px;
+            }
+
+            .asterisk {
+                font-size: 2rem;
+                color: red;
+            }
+
+            button.submit-btn {
+                border: none;
+                border-radius: 8px;
+                width: 100%;
+                background-color: $primary-color;
+                color: #fff;
+                padding: 8px 0;
+                margin-top: 24px;
+
+                &:hover {
+                    opacity: .9;
+                }
+            }
+        }
+    }
+}

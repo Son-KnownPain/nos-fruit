@@ -1,0 +1,81 @@
+@import 'app';
+
+.content {
+    .search-info {
+        .search-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0;
+            margin-bottom: 16px;
+            color: #888;
+
+            .keyword {
+                color: $text-color;
+            }
+        }
+    }
+
+    .filter-sidebar {
+        box-shadow: 0 0 7px rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 16px;
+
+        .heading {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $primary-color;
+            margin: 0 0 12px;
+        }
+
+        .price-filter {
+            padding: 12px 0;
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            .filter-label {
+                display: block;
+                margin-top: 20px;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+
+            .price-options {
+                margin-top: 4px;
+                padding: 8px 8px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                display: block;
+                width: 100%;
+                border: 1px solid #c1c1c1;
+                border-radius: 4px;
+                outline: none;
+            }
+        }
+    }
+
+    .products-box {
+        background-color: #fff;
+        box-shadow: 0 0 7px rgb(0 0 0 / 10%);
+        border-radius: 8px;
+
+        .heading {
+            padding: 16px;
+            background-color: $primary-color;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+
+            .heading-text {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: #fff;
+                margin: 0;
+            }
+        }
+    }
+}

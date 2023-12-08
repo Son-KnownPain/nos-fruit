@@ -1,0 +1,59 @@
+$space: 24px;
+
+/* The alert message box */
+.alert {
+    position: fixed;
+    top: $space;
+    right: $space;
+    padding: 20px;
+    max-width: 500px;
+    background-color: #007fff;
+    color: white;
+    margin-bottom: 15px;
+    z-index: 99;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 8px;
+    animation: fadeIn ease-in .4s;
+
+    &.success {
+        background-color: #0cc697;
+    }
+    &.error {
+        background-color: #ff2c2c;
+    }
+    &.warning {
+        background-color: #d3b925;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        color: black;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        right: calc(100% + $space);
+        opacity: 0;
+    }
+    to {
+        right: $space;
+        opacity: 1;
+    }
+}

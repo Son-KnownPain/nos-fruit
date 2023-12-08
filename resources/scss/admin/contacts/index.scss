@@ -1,0 +1,97 @@
+@import '../main.scss';
+
+.content {
+    h2.heading {
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    .search {
+        margin-top: 12px;
+
+        input.search-input {
+            font-size: 1.6rem;
+            padding: 6px 8px;
+            border: 1px solid #c5c5c5;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        a.search-icon-link {
+            font-size: 1.6rem;
+            background-color: #999;
+            color: #333;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        select.filter-level {
+            padding: 8px;
+            font-size: 1.6rem;
+            outline: none;
+            border-radius: 4px;
+            margin-left: 16px;
+        }
+
+        .other-btn {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: $primary-color;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            margin-left: 8px;
+
+            &:hover {
+                opacity: .9;
+            }
+        }
+    }
+
+    .products {
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            min-width: 400px;
+            width: 100%;
+            box-shadow: 0 0 7px rgba(0, 0, 0, 10%);
+
+            thead tr {
+                background-color: $primary-color;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            th, td {
+                padding: 12px 16px;
+            }
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid $primary-color;
+        }
+
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+
+        a.edit-link {
+            color: #c9b100;
+        }
+    }
+}

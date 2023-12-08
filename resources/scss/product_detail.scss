@@ -1,0 +1,159 @@
+@import 'app';
+
+.content {
+    .product-info {
+        background-color: #fff;
+        box-shadow: 0 0 7px rgb(0 0 0 / 10%);
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 16px;
+
+        .product-img {
+            width: 100%;
+        }
+
+        .name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: $text-color;
+        }
+
+        .line-attribute {
+            font-size: 1.6em;
+            font-weight: 400;
+            color: #888;
+            margin-top: 16px;
+
+            .value {
+                color: $primary-color;
+                font-weight: 600;
+            }
+        }
+
+        .price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-top: 16px;
+            color: $primary-color;
+            
+            s.strikethrough-price {
+                color: #888;
+                font-weight: 500;
+                font-size: 1.8rem;
+                margin-left: 8px;
+            }
+        }
+
+        .sumary {
+            margin-top: 24px;
+            font-size: 1.4rem;
+            color: #888;
+        }
+
+        .actions {
+            margin-top: 24px;
+            font-size: 1.6rem;
+
+            .title {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $text-color;
+                margin-bottom: 12px;
+            }
+
+            .icon {
+                border: 1px solid #e1e1e1;
+                border-radius: 8px;
+                padding: 8px;
+                user-select: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            .quantity {
+                border: 1px solid #e1e1e1;
+                border-radius: 8px;
+                padding: 8px 16px;
+                margin: 0 4px;
+                font-weight: 600;
+                user-select: none;
+            }
+
+            .add-cart-btn {
+                margin-left: 16px;
+                color: #fff;
+                background-color: $primary-color;
+                padding: 8px;
+                border-radius: 8px;
+                text-decoration: none;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .9;
+                }
+            }
+        }
+
+        .images-list-box {
+            margin-top: 20px;
+
+            .img-item {
+                width: 100%;
+                border: 1px solid #e1e1e1;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &.active {
+                    border-color: $primary-color;
+                    cursor: default;
+                }
+
+                &:hover {
+                    border-color: $primary-color;
+                }
+            }
+        }
+
+        .description {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #e1e1e1;
+
+            .title {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: $text-color;
+            }
+
+            .text {
+                padding: 4px;
+                margin-top: 24px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: $text-color;
+
+                max-height: 300px;
+                overflow: auto;
+            }
+        }
+    }
+
+    .related-products {
+        margin-top: 30px;
+        background-color: #fff;
+
+        .heading {
+            padding: 12px;
+            margin: 0;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            background-color: $primary-color;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+    }
+}
